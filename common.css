@@ -1,0 +1,138 @@
+/* === FUENTE Y BASE === */
+body {
+  background-color: #f8f9fa;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.navbar-brand {
+  font-family: 'Billabong', cursive;
+  font-size: 1.8rem;
+  color: black;
+}
+
+/* === BOTONES DE VISTA (CENTRO) === */
+.view-btn {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.view-btn:hover {
+  background-color: #e0e0e0;
+  color: #0d6efd;
+}
+
+.view-btn.active {
+  background-color: white;
+  color: black;
+}
+
+.view-btn.active:hover {
+  background-color: #e0e0e0;
+  color: #0d6efd;
+}
+
+/* === BOTÓN VERDE === */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* === FEED === */
+main {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+main img:hover {
+  transform: scale(1.03);
+}
+
+/* Margen entre posts */
+.row.g-3 article {
+  margin-bottom: 15px;
+}
+
+/* === ESTILOS GRID === */
+body.grid-view main .row.g-3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+body.grid-view main .row.g-3 article {
+  flex: 1 1 calc(33.333% - 10px);
+  max-width: calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+/* === ESTILOS LIST === */
+body.list-view main .row.g-3 {
+  display: block;
+}
+
+body.list-view main .row.g-3 article {
+  width: 100%;
+  margin-bottom: 25px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+}
+
+body.list-view main .row.g-3 article img {
+  border-radius: 5px;
+  transform: none;
+}
+
+body.list-view main article header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+body.list-view main article .likes {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+body.list-view main article .description {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}

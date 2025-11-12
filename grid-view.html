@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed - Grid View</title>
+
+  <!-- Bootstrap y FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- CSS común -->
+  <link rel="stylesheet" href="common.css">
+</head>
+<body class="grid-view">
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-light border-bottom bg-white">
+      <section class="container d-flex justify-content-between align-items-center py-2">
+        
+        <!-- Logo -->
+        <article class="d-flex align-items-center">
+          <i class="fab fa-instagram fa-lg me-2 text-dark"></i>
+          <span class="navbar-brand mb-0 h1">Instagram</span>
+        </article>
+
+        <!-- Botones de vista -->
+        <section class="d-flex align-items-center">
+          <button id="gridView" class="btn view-btn me-2 active">
+            <i class="fas fa-th"></i>
+          </button>
+          <button id="listView" class="btn view-btn">
+            <i class="fas fa-square"></i>
+          </button>
+        </section>
+
+        <!-- Botón derecho -->
+        <article class="d-flex align-items-center">
+          <button class="btn btn-success me-3" id="createPostBtn">Create a new post</button>
+          <div class="dropdown">
+            <button class="btn btn-light border" data-bs-toggle="dropdown">
+              <i class="fas fa-cog"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+    </nav>
+  </header>
+
+  <!-- FEED DE IMÁGENES -->
+  <main class="container my-4">
+    <section class="row g-3">
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic1/400" alt="Post 1" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic2/400" alt="Post 2" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic3/400" alt="Post 3" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic4/400" alt="Post 4" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic5/400" alt="Post 5" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic6/400" alt="Post 6" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic7/400" alt="Post 7" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic8/400" alt="Post 8" class="img-fluid rounded"></article>
+      <article class="col-12 col-md-4"><img src="https://picsum.photos/seed/pic9/400" alt="Post 9" class="img-fluid rounded"></article>
+    </section>
+  </main>
+
+  <!-- Modal Create a New Post -->
+<div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="createPostModalLabel">Create a New Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- Body -->
+      <div class="modal-body">
+        <label for="postCaption" class="form-label">Caption:</label>
+        <textarea id="postCaption" class="form-control mb-3" placeholder="Add the caption of your post here" rows="3"></textarea>
+        
+        <div class="d-flex gap-2 mb-3">
+          <button type="button" class="btn btn-outline-secondary w-50">
+            <i class="fas fa-camera"></i> Camera
+          </button>
+          <button type="button" class="btn btn-outline-secondary w-50">
+            <i class="fas fa-map-marker-alt"></i> Location
+          </button>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
