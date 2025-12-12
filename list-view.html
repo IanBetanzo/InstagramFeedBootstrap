@@ -22,15 +22,6 @@
           <span class="navbar-brand mb-0 h1">Instagram</span>
         </article>
 
-        <section class="d-flex align-items-center">
-          <button id="gridView" class="btn view-btn me-2">
-            <i class="fas fa-th"></i>
-          </button>
-          <button id="listView" class="btn view-btn active">
-            <i class="fas fa-square"></i>
-          </button>
-        </section>
-
         <article class="d-flex align-items-center">
           <button class="btn btn-success me-3" id="createPostBtn">Create a new post</button>
           <div class="dropdown">
@@ -50,6 +41,20 @@
       </section>
     </nav>
   </header>
+
+<!--Botones de vista-->
+  <div class="container mt-3">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center gap-2">
+      <button id="gridView" class="btn view-btn">
+        <i class="fas fa-th"></i>
+      </button>
+      <button id="listView" class="btn view-btn active">
+        <i class="fas fa-square"></i>
+      </button>
+    </div>
+  </div>
+</div>
 
   <!-- FEED DE POSTS (LIST) -->
   <main class="container my-4">

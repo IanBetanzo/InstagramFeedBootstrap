@@ -136,3 +136,12 @@ body.list-view main article .description {
   color: #333;
   margin-bottom: 5px;
 }
+
+body.list-view main img {
+  transform: none !important;
+  transition: none !important;
+}
+
+body.grid-view main img:hover {
+  transform: scale(1.03) !important;
+}
